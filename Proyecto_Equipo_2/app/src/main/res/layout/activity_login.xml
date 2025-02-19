@@ -53,6 +53,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
 
+    <!-- Botón para reenviar el correo -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReenviarCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reenviar correo de verificación"
+        app:layout_constraintTop_toBottomOf="@id/tvIntentosRestantes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
     <!-- Texto para mostrar intentos restantes -->
     <TextView
         android:id="@+id/tvIntentosRestantes"

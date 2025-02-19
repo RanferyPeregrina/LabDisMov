@@ -45,20 +45,33 @@ class LoginActivity : AppCompatActivity() {
         val correo = etCorreoLogin.text?.toString()?.trim()
         val contrasena = etContrasenaLogin.text?.toString()?.trim()
 
+        // Validar que los campos no estén vacíos
         if (correo.isNullOrEmpty() || contrasena.isNullOrEmpty()) {
             mostrarMensaje("Todos los campos son obligatorios")
             return
         }
 
+        // Mostrar progreso (deshabilitar botón, etc.)
         mostrarProgreso(true)
 
+        // Intentar autenticar al usuario con Firebase
         auth.signInWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    mostrarMensaje("Sesión iniciada correctamente")
-                    startActivity(Intent(this, HomeActivity::class.java)) // Redirigir al Home
-                    finish()
+                    // Obtener el usuario actual
+                    val user = auth.currentUser
+
+                    // Verificar si el correo electrónico está verificado
+                    if (user?.isEmailVerified == true) {
+                        mostrarMensaje("Sesión iniciada correctamente")
+                        startActivity(Intent(this, HomeActivity::class.java)) // Redirigir al Home
+                        finish() // Cerrar la actividad de inicio de sesión
+                    } else {
+                        mostrarMensaje("Por favor, verifica tu correo electrónico.")
+                        auth.signOut() // Cerrar la sesión automáticamente
+                    }
                 } else {
+                    // Manejo de intentos fallidos
                     intentosFallidos++
                     if (intentosFallidos >= 3) {
                         bloquearBotonTemporalmente()
@@ -68,6 +81,8 @@ class LoginActivity : AppCompatActivity() {
                         tvIntentosRestantes.text = "Intentos restantes: $intentosRestantes"
                     }
                 }
+
+                // Ocultar progreso (habilitar botón, etc.)
                 mostrarProgreso(false)
             }
     }

@@ -82,6 +82,23 @@ class RegisterActivity : AppCompatActivity() {
             "fechaRegistro" to System.currentTimeMillis()
         )
 
+            database.reference.child("usuarios").child(userId).setValue(userData)
+                .addOnSuccessListener {
+                    // Enviar correo de verificación
+                    auth.currentUser?.sendEmailVerification()
+                        ?.addOnSuccessListener {
+                            mostrarMensaje("Se ha enviado un correo de verificación.")
+                            finish() // Cierra la actividad de registro
+                        }
+                    ?.addOnFailureListener { e ->
+                        mostrarMensaje("Error al enviar correo: ${e.message}")
+                    }
+            }
+            .addOnFailureListener { e ->
+                mostrarMensaje("Error al guardar datos: ${e.message}")
+            }
+    }
+
         database.reference.child("usuarios").child(userId).setValue(userData)
             .addOnSuccessListener {
                 mostrarProgreso(false)
