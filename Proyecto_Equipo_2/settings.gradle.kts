@@ -1,11 +1,15 @@
+// settings.gradle.kts
+
 pluginManagement {
     repositories {
         google()
-        mavenCentral()
         gradlePluginPortal()
+        mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
+    // Esta opción impide que se declaren repositorios en build.gradle de módulos.
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()

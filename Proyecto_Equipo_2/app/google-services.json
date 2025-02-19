@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "1003468199672",
+    "firebase_url": "https://proyectoequipo2-a20a4-default-rtdb.firebaseio.com",
     "project_id": "proyectoequipo2-a20a4",
     "storage_bucket": "proyectoequipo2-a20a4.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1003468199672:android:5a7b0c7f7694ae7d1e0d0d",
+        "mobilesdk_app_id": "1:1003468199672:android:414e2ecf0120a9bb1e0d0d",
         "android_client_info": {
           "package_name": "com.example.proyecto_equipo_2"
         }
