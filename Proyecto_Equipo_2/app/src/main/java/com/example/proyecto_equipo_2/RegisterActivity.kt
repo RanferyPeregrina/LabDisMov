@@ -16,6 +16,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var etContrasena: TextInputEditText
     private lateinit var btnRegistrar: MaterialButton
     private lateinit var progressBar: View
+    private lateinit var etConfirmarContrasena: TextInputEditText
 
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
@@ -30,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         etContrasena = findViewById(R.id.etContrasena)
         btnRegistrar = findViewById(R.id.btnRegistrar)
         progressBar = findViewById(R.id.progressBar)
+        etConfirmarContrasena = findViewById(R.id.etConfirmarContrasena)
 
         // Inicializar Firebase
         auth = FirebaseAuth.getInstance()
@@ -44,10 +46,15 @@ class RegisterActivity : AppCompatActivity() {
         val nombre = etNombreCompleto.text?.toString()?.trim() ?: ""
         val correo = etCorreo.text?.toString()?.trim() ?: ""
         val contrasena = etContrasena.text?.toString()?.trim() ?: ""
+        val confirmacion = etConfirmarContrasena.text?.toString()?.trim() ?: ""
 
         // Validaciones
         if (nombre.isEmpty() || correo.isEmpty() || contrasena.isEmpty()) {
             mostrarMensaje("Todos los campos son obligatorios")
+            return
+        }
+        if (contrasena != confirmacion) {
+            mostrarMensaje("Las contraseñas no coinciden")
             return
         }
 
