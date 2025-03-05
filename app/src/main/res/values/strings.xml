@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mov2</string>
+
+    <string name="label_main">Bienvenido a Mov2🎉✨</string>
+    <string name="label_register">Registro de usuario</string>
+    <string name="label_Login">Inicio de sesión de usuario</string>
+    <string name="label_bienvenida">Usted se ha loggeado correctamente, Bienvenido</string>
+
+    <string name="login">Iniciar sesión</string>
+    <string name="register">Registrar usuario</string>
+    <string name="idioma">Cambiar idioma</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+    <string name="form_Nombre">Ingrese Nombre de usuario</string>
+    <string name="form_Correo">Ingrese correo de usuario</string>
+    <string name="form_Contra">Ingrese contraseña</string>
+
+</resources>
