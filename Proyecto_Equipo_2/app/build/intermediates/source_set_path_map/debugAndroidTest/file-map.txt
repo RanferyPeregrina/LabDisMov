@@ -1,0 +1,6 @@
+com.example.proyecto_equipo_2.test.app-core-1.5.0-0 C:\Users\Diego\.gradle\caches\8.10.2\transforms\27e60c0f47be469c6c234486c5f5e184\transformed\core-1.5.0\res
+com.example.proyecto_equipo_2.test.app-annotation-experimental-1.3.0-1 C:\Users\Diego\.gradle\caches\8.10.2\transforms\7f45db3dbc18745245268ff204d75174\transformed\annotation-experimental-1.3.0\res
+com.example.proyecto_equipo_2.test.app-androidTest-2 C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\build\generated\res\resValues\androidTest\debug
+com.example.proyecto_equipo_2.test.app-mergeDebugAndroidTestResources-3 C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.proyecto_equipo_2.test.app-mergeDebugAndroidTestResources-4 C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.proyecto_equipo_2.test.app-merged_res-5 C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\build\intermediates\merged_res\debugAndroidTest

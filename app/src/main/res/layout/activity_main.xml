@@ -60,4 +60,13 @@
         app:layout_constraintHorizontal_bias="0.988"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Agregar esto en activity_main.xml junto a tus otros botones -->
+    <Button
+        android:id="@+id/btnRolesActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestionar Roles"
+        android:layout_marginTop="16dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

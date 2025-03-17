@@ -31,19 +31,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Nuevo botón para gestión de roles
+        binding.btnRolesActivity.setOnClickListener {
+            val intent = Intent(this, RolesActivity::class.java)
+            startActivity(intent)
+        }
+
         // Botón para cambiar a inglés
-                binding.btnChangeLanguage.setOnClickListener {
-                    val currentLanguage = Locale.getDefault().language
-                    Log.d("LANGUAGE_DEBUG", "Idioma actual: $currentLanguage")
+        binding.btnChangeLanguage.setOnClickListener {
+            val currentLanguage = Locale.getDefault().language
+            Log.d("LANGUAGE_DEBUG", "Idioma actual: $currentLanguage")
 
-                    val newLanguage = if (currentLanguage == "es") "en" else "es"
-                    Log.d("LANGUAGE_DEBUG", "Nuevo idioma: $newLanguage")
+            val newLanguage = if (currentLanguage == "es") "en" else "es"
+            Log.d("LANGUAGE_DEBUG", "Nuevo idioma: $newLanguage")
 
-                    LocaleHelper.setLocale(this, newLanguage)
-                    recreate()  // Recargar la actividad para aplicar cambios
-                }
-
-
-
+            LocaleHelper.setLocale(this, newLanguage)
+            recreate()  // Recargar la actividad para aplicar cambios
+        }
     }
 }

@@ -42,6 +42,12 @@
             android:exported="true"
             android:theme="@style/Theme.EQ2" />
 
+        <activity
+            android:name=".RolesActivity"
+            android:exported="true"
+            android:theme="@style/Theme.EQ2"/>
+
+
     </application>
 
 </manifest>

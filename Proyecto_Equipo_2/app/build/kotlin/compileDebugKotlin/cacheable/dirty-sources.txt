@@ -1,0 +1,4 @@
+C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\src\main\java\com\example\proyecto_equipo_2\LoginActivity.kt
+C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\src\main\java\com\example\proyecto_equipo_2\RegisterActivity.kt
+C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\src\main\java\com\example\proyecto_equipo_2\HomeActivity.kt
+C:\Users\Diego\Documents\Dev\school\dismov\LabDisMov\Proyecto_Equipo_2\app\src\main\java\com\example\proyecto_equipo_2\MainActivity.kt
